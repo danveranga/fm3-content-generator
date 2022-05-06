@@ -1,0 +1,2 @@
+"use strict";const api="https://api.adviceslip.com/advice",adviceId=document.getElementById("adviceId"),message=document.getElementById("message"),diceBtn=document.getElementById("dice-btn");async function logic(){try{const e=await fetch(api),c=await e.json();message.innerHTML="“".concat(c.slip.advice,"”"),adviceId.innerHTML="ADVICE #".concat(c.slip.id)}catch(e){console.log(e),message.innerHTML=e.message}}diceBtn.addEventListener("click",logic);
+//# sourceMappingURL=main.js.map

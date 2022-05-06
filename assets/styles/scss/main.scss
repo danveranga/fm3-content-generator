@@ -1,0 +1,130 @@
+@use 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    body {
+        background-color: colors.$dark-blue;
+        font-family: 'Manrope', Arial, sans-serif;
+        color: colors.$light-cyan;
+    }
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.main-container {
+    background-color: colors.$dark-gb;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 0 50px 10px colors.$dark-blue;
+    border-radius: 15px;
+    padding: 40px;
+    width: 500px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+    position: relative;
+}
+
+#adviceId {
+    letter-spacing: 6px;
+    color: colors.$neon-green;
+    font-size: 0.7em;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.divider-one, .divider-two {
+    margin-bottom: 25px;
+}
+
+.divider-two {
+    display: none;
+}
+
+.attribution-container {
+    font-size: 0.6em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    &:link {
+        color: colors.$grayish-blue;
+    }
+    &.visited {
+        color:rgb(216, 74, 74);
+    }
+    &:hover {
+        color: colors.$neon-green;
+    }
+    &:active {
+        color: maroon;
+    }
+}
+
+#dice-btn {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    border: 0;
+    background-color: colors.$neon-green;
+    position: absolute;
+    bottom: -30px;
+    transition: all 0.3s;
+    .dice {
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+    }
+    &:hover {
+        box-shadow: 0 0 30px 3px colors.$neon-green;
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+    }
+    &:active {
+        transform: rotate(180deg);
+    }
+}
+
+// media queries for 375px
+@media only screen and (max-width: 520px) {
+    .main-container {
+        width: 350px;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        padding: 30px;
+    }
+    #message {
+        font-size: 23px;
+    }
+    .divider-one {
+        display: none;
+    }
+    .divider-two {
+        display: block;
+    }
+}
