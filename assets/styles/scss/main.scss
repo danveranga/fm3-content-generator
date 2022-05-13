@@ -35,8 +35,7 @@ html {
     border-radius: 15px;
     padding: 40px;
     width: 500px;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin: 13% auto;
 
     position: relative;
 }
@@ -71,17 +70,12 @@ html {
 
 a {
     text-decoration: none;
-    &:link {
-        color: colors.$grayish-blue;
-    }
-    &.visited {
-        color:rgb(216, 74, 74);
-    }
+    color: inherit;
     &:hover {
         color: colors.$neon-green;
     }
     &:active {
-        color: maroon;
+        color: rgb(67, 186, 255);
     }
 }
 
