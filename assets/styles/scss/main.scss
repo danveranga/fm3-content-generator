@@ -108,8 +108,7 @@ a {
 @media only screen and (max-width: 520px) {
     .main-container {
         width: 350px;
-        margin-top: 20%;
-        margin-bottom: 20%;
+        margin: 35% auto;
         padding: 30px;
     }
     #message {
@@ -120,5 +119,11 @@ a {
     }
     .divider-two {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 519px) {
+    .main-container {
+        margin: 25% auto;
     }
 }
